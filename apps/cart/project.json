@@ -5,7 +5,7 @@
   "projectType": "application",
   "generators": {},
   "targets": {
-    "build": {
+    "build-old": {
       "executor": "@nx/webpack:webpack",
       "options": {
         "outputPath": "dist/apps/cart",
