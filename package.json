@@ -45,6 +45,7 @@
     "@ngrx/router-store": "17.0.1",
     "@ngrx/store": "17.0.1",
     "@nx/angular": "19.1.2",
+    "@nx/vite": "^19.1.2",
     "document-register-element": "1.13.1",
     "normalize.css": "^8.0.1",
     "nx-cloud": "^19.0.0",
