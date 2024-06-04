@@ -1,5 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
+import UnoCSS from 'unocss/vite';
+import presetWind from '@unocss/preset-wind';
 
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
@@ -17,7 +19,13 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [nxViteTsPaths()],
+  plugins: [
+    nxViteTsPaths(),
+    UnoCSS({
+      mode: 'shadow-dom',
+      presets: [presetWind()],
+    }),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {
