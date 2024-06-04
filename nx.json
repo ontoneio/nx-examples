@@ -1,8 +1,6 @@
 {
   "cli": {
-    "warnings": {
-      "versionMismatch": false
-    },
+    "warnings": { "versionMismatch": false },
     "packageManager": "yarn",
     "analytics": false
   },
@@ -11,13 +9,9 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
-    "@nx/angular:library": {
-      "unitTestRunner": "jest"
-    },
+    "@nx/angular:library": { "unitTestRunner": "jest" },
     "@nx/angular": {
-      "convert-tslint-to-eslint": {
-        "removeTSLintIfNoMoreTSLintTargets": true
-      }
+      "convert-tslint-to-eslint": { "removeTSLintIfNoMoreTSLintTargets": true }
     },
     "@nx/react": {
       "application": {
@@ -26,13 +20,8 @@
         "linter": "eslint",
         "bundler": "webpack"
       },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     }
   },
   "defaultProject": "products",
@@ -65,15 +54,10 @@
       "!{projectRoot}/test-setup.[jt]s"
     ]
   },
-  "nxCloudAccessToken": "MTE1ZmYwZmItNGQxNS00NWMyLWExY2YtYWIyODkxZTdkOWNkfHJlYWQ=",
+  "nxCloudAccessToken": "YWMzMmMwNTUtY2JjMC00NzY5LWJhOTctNjcyODEzMDg5YTMxfHJlYWQtd3JpdGU=",
   "parallel": 1,
   "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/cypress/plugin",
       "options": {
@@ -82,12 +66,7 @@
         "componentTestingTargetName": "component-test"
       }
     },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
   "defaultBase": "master"
 }
