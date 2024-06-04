@@ -1,6 +1,8 @@
 {
   "cli": {
-    "warnings": { "versionMismatch": false },
+    "warnings": {
+      "versionMismatch": false
+    },
     "packageManager": "yarn",
     "analytics": false
   },
@@ -9,9 +11,13 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
-    "@nx/angular:library": { "unitTestRunner": "jest" },
+    "@nx/angular:library": {
+      "unitTestRunner": "jest"
+    },
     "@nx/angular": {
-      "convert-tslint-to-eslint": { "removeTSLintIfNoMoreTSLintTargets": true }
+      "convert-tslint-to-eslint": {
+        "removeTSLintIfNoMoreTSLintTargets": true
+      }
     },
     "@nx/react": {
       "application": {
@@ -20,8 +26,19 @@
         "linter": "eslint",
         "bundler": "webpack"
       },
-      "component": { "style": "css" },
-      "library": { "style": "css", "linter": "eslint" }
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    },
+    "@nx/web:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "playwright"
     }
   },
   "defaultProject": "products",
@@ -79,7 +96,18 @@
         "componentTestingTargetName": "component-test"
       }
     },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
   ],
   "defaultBase": "master"
 }
